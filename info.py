@@ -40,10 +40,10 @@ class evamaria(Client):
         )
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+SESSION = environ.get('1BVtsOK0Bu6NQA9G4KqninLNFv4X5iGJcVBON8kpIWER4-cJZ_EcqaOzIERhRScsTJ-fo3h9xaloakvT8g67H1BqCHskUbVhodX0HoOcCSXL95phHdEZfYm_sx_7m2ADOs9gmMdYr4KXUKbX8OC2DvKwAeIFu413-XD8FLr8TZOIUjjErx8DkdK-rSOItUXWIoXyM1CY_SuyRlc8jQCUEFybOg-igyQ6VI0m3ua4QJ2mlEMOWgLL8Migkb9qofoAOP4bVqza1ya2exJJyHDkCl2OPSUVHsDMKYBbVRkDykBGn4bQq2RmGPoLrc1wqzviqXYjTee_7i3i992pDuKAUUfMclx1eS9s=', 'Media_search')
+API_ID = int(environ['21746828'])
+API_HASH = environ['12f1f5beec232837399a513ed2efe4db']
+BOT_TOKEN = environ['6076236777:AAGpIk2FoFHrRwVOFEnIOpv6KGRGqT77YDA']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -59,8 +59,8 @@ MELCOW_VID = environ.get('MELCOW_VID',"https://graph.org/file/11c15b34849e1d5e24
 
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('6004131355', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('-884744978', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -72,10 +72,10 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "doctorstrange")
+DATABASE_URI = environ.get('mongodb+srv://yha:yha@cluster0.ulj8axy.mongodb.net/?retryWrites=true&w=majority', "")
+DATABASE_NAME = environ.get('BOTGRUP', "doctorstrange")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-MONGO_URL = os.environ.get('MONGO_URL', "")
+MONGO_URL = os.environ.get('mongodb+srv://yha:yha@cluster0.ulj8axy.mongodb.net/?retryWrites=true&w=majority', "")
 
 
 # Others

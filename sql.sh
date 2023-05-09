@@ -2,6 +2,8 @@
 
 set -e
 
+read -e -p "Input your USERNAME : " USER
+
 DB_NAME=${1:-my_pg_user}
 
 DB_USER=${2:-my_awesome_db}
@@ -12,10 +14,10 @@ sudo su postgres <<EOF
 
 createdb  $DB_NAME;
 
-psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_USER_PASS';"
+psql -c "CREATE USER $USER WITH PASSWORD '$USER';"
 
-psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
+psql -c "grant all privileges on database $USER to $USER;"
 
-echo "Postgres User '$DB_USER' and database '$DB_NAME' created."
+echo "Postgres User '$USER' and database '$USER' created."
 
 EOF

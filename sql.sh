@@ -12,7 +12,7 @@ DB_USER_PASS=${3:-hard_password}
 
 sudo su postgres <<EOF
 
-createdb  $DB_NAME;
+createdb  $USER;
 
 psql -c "CREATE USER $USER WITH PASSWORD '$USER';"
 
